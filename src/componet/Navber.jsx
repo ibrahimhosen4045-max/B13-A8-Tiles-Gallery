@@ -63,12 +63,14 @@ const Navber = () => {
           </a>
         </li>
         <li><a>Settings</a></li>
+        <Link href={'/login'} className='w-full flex justify-center'>
         <button onClick={async ()=> await authClient.signOut()} className=' group  btn px-10 bg-[#5C1621] text-white hover:text-[#5C1621] hover:bg-white transition duration-300'>
           LogOut
           <span className='p-1 bg-amber-400 group-hover:bg-[#5C1621] rounded-full group-hover:rotate-45 transition duration-300 '>
           <GoArrowUpRight className='text-xl text-white'/>
           </span>
         </button>
+        </Link>
       </ul>
             </div>
         </div>) : (<Link href={'/login'}>

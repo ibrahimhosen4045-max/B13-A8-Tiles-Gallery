@@ -1,11 +1,13 @@
 import Navber from "@/componet/Navber"
+import { ToastContainer } from "react-toastify"
 
 const AuthLayout = ({children}) => {
   return (
     <div>
-     <Navber></Navber>
+     {/* <Navber></Navber> */}
 
       {children}
+      <ToastContainer position="top-center"/>
     </div>
   )
 }
