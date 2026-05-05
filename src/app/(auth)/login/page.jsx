@@ -95,7 +95,7 @@ const LoginPage = () => {
             </div>
             {errors.password && <p className="text-red-500 text-sm">{errors.password.message}</p>}
 
-            <button className="w-full bg-blue-600 text-white py-2 rounded-md mt-3">
+            <button className=" btn w-full  bg-blue-600 text-white py-2 rounded-md mt-3">
               Login
             </button>
           </form>

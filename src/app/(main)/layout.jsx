@@ -1,3 +1,4 @@
+
 import Footer from '@/componet/Footer'
 import Navber from '@/componet/Navber'
 import React from 'react'

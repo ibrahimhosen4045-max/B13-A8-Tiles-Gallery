@@ -1,4 +1,4 @@
-"use client"
+'use client'
 import React from 'react'
 import image from '@/image/footerimage.jpg'
 import Image from 'next/image'
@@ -9,8 +9,12 @@ import { FaInstagramSquare, FaPhoneAlt, FaTwitter, FaTwitterSquare } from 'react
 import { FaInstagram } from 'react-icons/fa6'
 import { MdMail } from 'react-icons/md'
 import { HiLocationMarker } from 'react-icons/hi'
+import { toast } from 'react-toastify'
 
 const Footer = () => {
+  const subcribe = ()=> {
+    toast.success("Thanks for suport")
+  }
   return (
     <div className='w-full h-[85vh] md:h-[75vh] lg:h-[40vh] overflow-hidden relative text-white'>
 
@@ -84,10 +88,11 @@ const Footer = () => {
               <div className="md:join pt-4 ">
                 <input
                   type="text"
+                  
                   placeholder="username@site.com"
                   className="input input-bordered join-item w-48 block md:inline"
                 />
-                <button className="btn bg-amber-400 text-white join-item mt-2 md:mt-0">Subscribe</button>
+                <button onClick={subcribe} className="btn bg-amber-400 text-white join-item mt-2 md:mt-0">Subscribe</button>
               </div>
             </fieldset>
           </form>

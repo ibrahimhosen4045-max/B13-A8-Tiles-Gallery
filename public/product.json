@@ -1,0 +1,122 @@
+[
+  {
+    "id": "tile_001",
+    "title": "Ceramic Blue Tile",
+    "description": "Premium ceramic tile with blue glaze finish",
+    "image": "https://i.ibb.co.com/fdd8s4GV/Product9.webp",
+    "category": "ceramic",
+    "price": 45.99,
+    "currency": "USD",
+    "dimensions": "60x60 cm",
+    "material": "Ceramic",
+    "inStock": true
+  },
+  {
+    "id": "tile_002",
+    "title": "Marble White Tile",
+    "description": "Elegant white marble finish tile",
+    "image": "https://i.ibb.co.com/DfKb1Nr5/Product10.webp",
+    "category": "marble",
+    "price": 65.50,
+    "currency": "USD",
+    "dimensions": "80x80 cm",
+    "material": "Marble",
+    "inStock": true
+  },
+  {
+    "id": "tile_003",
+    "title": "Granite Black Tile",
+    "description": "Durable granite tile with polished finish",
+    "image": "https://i.ibb.co.com/204LNX3c/Product11.webp",
+    "category": "granite",
+    "price": 70.00,
+    "currency": "USD",
+    "dimensions": "60x120 cm",
+    "material": "Granite",
+    "inStock": false
+  },
+  {
+    "id": "tile_004",
+    "title": "Wooden Texture ",
+    "description": "Natural wood look ceramic tile",
+    "image": "https://i.ibb.co.com/rKMxMtzT/Product12.webp",
+    "category": "wood",
+    "price": 50.25,
+    "currency": "USD",
+    "dimensions": "20x120 cm",
+    "material": "Ceramic",
+    "inStock": true
+  },
+  {
+    "id": "tile_005",
+    "title": "Glossy Grey Tile",
+    "description": "Modern glossy finish grey tile",
+    "image": "https://i.ibb.co.com/chBWjRTC/Product13.webp",
+    "category": "ceramic",
+    "price": 42.75,
+    "currency": "USD",
+    "dimensions": "60x60 cm",
+    "material": "Ceramic",
+    "inStock": true
+  },
+  {
+    "id": "tile_006",
+    "title": "Rustic Brown Tile",
+    "description": "Rustic design tile for classic interiors",
+    "image": "https://i.ibb.co.com/3yM95T10/Product14.webp",
+    "category": "rustic",
+    "price": 55.00,
+    "currency": "USD",
+    "dimensions": "50x50 cm",
+    "material": "Porcelain",
+    "inStock": false
+  },
+  {
+    "id": "tile_007",
+    "title": "Polished Porcelain Tile",
+    "description": "High gloss porcelain tile for luxury look",
+    "image": "https://i.ibb.co.com/xqqNxCX8/Product15.webp",
+    "category": "porcelain",
+    "price": 68.99,
+    "currency": "USD",
+    "dimensions": "80x80 cm",
+    "material": "Porcelain",
+    "inStock": true
+  },
+  {
+    "id": "tile_008",
+    "title": "Matte Finish Tile",
+    "description": "Smooth matte finish tile for modern homes",
+    "image": "https://i.ibb.co.com/1J9XqZjq/Product16.webp",
+    "category": "ceramic",
+    "price": 39.99,
+    "currency": "USD",
+    "dimensions": "60x60 cm",
+    "material": "Ceramic",
+    "inStock": true
+  },
+  {
+    "id": "tile_009",
+    "title": "Decorative Pattern Tile",
+    "description": "Stylish patterned tile for walls",
+    "image": "https://i.ibb.co.com/jvDyMFqC/Product4.webp",
+    "category": "decorative",
+    "price": 48.80,
+    "currency": "USD",
+    "dimensions": "30x30 cm",
+    "material": "Ceramic",
+    "inStock": true
+  },
+  {
+    "id": "tile_010",
+    "title": "Outdoor Stone Tile",
+    "description": "Weather-resistant tile for outdoor use",
+    "image": "https://i.ibb.co.com/zWTbjJvz/Product6.jpg",
+    "category": "stone",
+    "price": 72.30,
+    "currency": "USD",
+    "dimensions": "60x60 cm",
+    "material": "Stone",
+    "inStock": false
+  }
+]

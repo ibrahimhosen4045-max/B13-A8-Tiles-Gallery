@@ -12,21 +12,13 @@ const Navber = () => {
   const user = session?.user
   
   const meno = <>
-  <li><button>Home</button></li>
-        <li>
-          <details>
-            <summary>All Tiles</summary>
-            <ul className="p-2 bg-base-100 w-40 z-1">
-              <li><button>Submenu 1</button></li>
-              <li><button>Submenu 2</button></li>
-            </ul>
-          </details>
-        </li>
-        <li><button>My Profile</button></li>
+      <Link href={'/'}><li><button>Home</button></li></Link>
+      <Link href={'/allTiles'}><li><button>All Tiles</button></li></Link>
+      <Link href={'/myProfile'}><li><button>My Profile</button></li></Link>
   </>
   return (
     <div className=' absolute top-5 z-50 container w-11/12 left-[50%] translate-x-[-50%]'>
-      <div className=" backdrop-blur-lg lg:mb-48 shadow-md w-full rounded-full bg-white ">
+      <div className=" backdrop-blur-lg lg:mb-48 shadow-md w-full rounded-full bg-white border border-gray-100">
         <input id="navbar-1-toggle" className="peer hidden" type="checkbox" />
           <label htmlFor="navbar-1-toggle" className="fixed inset-0 hidden max-lg:peer-checked:block"></label>
           <div className="collapse-title navbar py-0 min-h-0">
@@ -34,10 +26,12 @@ const Navber = () => {
               <label htmlFor="navbar-1-toggle" className="btn btn-ghost lg:hidden">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
               </label>
+              <Link href={'/'}>
               <button className="  flex items-center ">
                 <Image src={logo} alt='Logo' height={70}/>
                   <h1 className='text-2xl font-bold leading-5 '>Tiles.</h1> 
               </button>
+              </Link>
             </div>
             <div className="navbar-center hidden lg:flex text-lg font-semibold">
               <ul className="menu menu-horizontal px-1">
@@ -46,11 +40,11 @@ const Navber = () => {
             </div>
             <div className="navbar-end">
             {isPending ? (<span className="loading loading-ring loading-md"></span>) : user ? (<div className='flex items-center gap-3'>
-          <h2 className='font-semibold text-[#5C1621]'>Hello, {user.name}</h2>
+          <h2 className='font-semibold text-[#5C1621]'>Hello, {user?.name}</h2>
         <div className="dropdown dropdown-end">
       <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
         <div className='h-10.5 w-10.5 overflow-hidden rounded-full border-2 shadow-sm border-gray-300'>
-          <Image className=' object-cover object-center ' src={user?.image || user} alt='user' width={41} height={31}/>
+          <Image className=' object-cover object-center ' src={user?.image || "https://img.magnific.com/free-vector/smiling-young-man-illustration_1308-174669.jpg"} alt='user' width={41} height={31}/>
         </div>
       </div>
       <ul
@@ -63,14 +57,14 @@ const Navber = () => {
           </a>
         </li>
         <li><a>Settings</a></li>
-        <Link href={'/login'} className='w-full flex justify-center'>
+        <div  className='w-full flex justify-center'>
         <button onClick={async ()=> await authClient.signOut()} className=' group  btn px-10 bg-[#5C1621] text-white hover:text-[#5C1621] hover:bg-white transition duration-300'>
           LogOut
           <span className='p-1 bg-amber-400 group-hover:bg-[#5C1621] rounded-full group-hover:rotate-45 transition duration-300 '>
           <GoArrowUpRight className='text-xl text-white'/>
           </span>
         </button>
-        </Link>
+        </div>
       </ul>
             </div>
         </div>) : (<Link href={'/login'}>

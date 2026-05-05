@@ -1,13 +1,10 @@
-import { Open_Sans } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
-import Navber from "@/componet/Navber";
-import Footer from "@/componet/Footer";
 
-
-const OpenSent = Open_Sans({
+const poppins = Poppins({
   subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"], 
 });
-
 
 export const metadata = {
   icons: {
@@ -22,13 +19,11 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      data-theme = "light"
-      className={`${OpenSent.className} h-full antialiased`}
+      data-theme="light"
+      className={`${poppins.className} h-full antialiased`}
     >
-      <body className="">
-        
+      <body>
         {children}
-        
       </body>
     </html>
   );
