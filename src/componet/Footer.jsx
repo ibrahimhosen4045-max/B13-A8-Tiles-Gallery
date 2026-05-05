@@ -9,14 +9,12 @@ import { FaInstagramSquare, FaPhoneAlt, FaTwitter, FaTwitterSquare } from 'react
 import { FaInstagram } from 'react-icons/fa6'
 import { MdMail } from 'react-icons/md'
 import { HiLocationMarker } from 'react-icons/hi'
-import { toast } from 'react-toastify'
+
 
 const Footer = () => {
-  const subcribe = ()=> {
-    toast.success("Thanks for suport")
-  }
+
   return (
-    <div className='w-full h-[85vh] md:h-[75vh] lg:h-[40vh] overflow-hidden relative text-white'>
+    <div className='w-full h-[85vh] md:h-[60vh] lg:h-[40vh] overflow-hidden relative text-white'>
 
       {/* Background Image */}
      <div className="absolute inset-0 -z-10">
@@ -45,12 +43,7 @@ const Footer = () => {
               </div>
             </div>
             <p>We are a trusted manufacturer premium tiles and marble, delivering surface solutions for residential.</p>
-            <div className='flex gap-2 pt-4'>
-              <ImFacebook  className='text-lg'/>
-              <FaTwitter className='text-xl'/>
-              <FaTwitterSquare className='text-xl'/>
-              <FaInstagram className='text-xl'/>
-            </div>
+            
           </nav>
 
           <nav className='space-y-1'>
@@ -83,17 +76,13 @@ const Footer = () => {
             <h6 className="font-semibold text-lg">Newsletter</h6>
             <span className='border border-amber-400 w-5'></span>
             <fieldset className="w-80 ">
-              <label className=''>Enter your email address</label>
-
-              <div className="md:join pt-4 ">
-                <input
-                  type="text"
-                  
-                  placeholder="username@site.com"
-                  className="input input-bordered join-item w-48 block md:inline"
-                />
-                <button onClick={subcribe} className="btn bg-amber-400 text-white join-item mt-2 md:mt-0">Subscribe</button>
-              </div>
+              <h1 className='font-semibold text-xl text-amber-400'>Join our social media</h1>
+              <div className='flex gap-2 pt-4'>
+              <ImFacebook  className='text-lg cursor-pointer hover:text-amber-400'/>
+              <FaTwitter className='text-xl cursor-pointer hover:text-amber-400'/>
+              <FaTwitterSquare className='text-xl cursor-pointer hover:text-amber-400'/>
+              <FaInstagram className='text-xl cursor-pointer hover:text-amber-400'/>
+            </div>
             </fieldset>
           </form>
 

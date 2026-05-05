@@ -38,10 +38,10 @@ const LoginPage = () => {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-200">
-      <div className="w-[900px] h-[550px] bg-white rounded-xl shadow-lg overflow-hidden flex">
+      <div className="w-[900px] h-[550px] bg-white rounded-xl shadow-lg overflow-hidden flex ">
 
         {/* LEFT SIDE */}
-        <div className="flex-3 bg-blue-600 text-white flex flex-col   p-10 justify-between">
+        <div className="flex-3 bg-blue-600 text-white hidden md:flex flex-col   p-10 justify-between">
           <div className=''>
             <h2 className="text-3xl font-semibold mb-4">Login</h2>
           <p className=" text-sm opacity-90">
@@ -84,6 +84,7 @@ const LoginPage = () => {
                 type={showPass ? "text" : "password"}
                 {...register("password", { required: "Password field is required" })}
                 placeholder="Password"
+                 autoComplete="new-password"
                 className="w-full border-b outline-none py-2"
               />
               <span
