@@ -28,7 +28,7 @@ const BannerT = () => {
           
           <div className='flex flex-col items-center gap-3  relative top-20'>
             <h1 className='text-5xl font-semibold'>Our Product</h1>
-            <p className='text-lg'><Link href={'/'}><span className=' cursor-pointer hover:text-amber-400'>Home </span></Link>/ Product</p>
+            <p className='text-lg'><Link href={'/'}><span className=' cursor-pointer hover:text-amber-400'>Home </span></Link>/ New Arrivals</p>
           </div>
         </div>
         
