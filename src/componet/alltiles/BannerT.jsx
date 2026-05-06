@@ -1,8 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
 import bannerImage from '@/image/allbanner.jpg';
-import { FaCheckCircle } from 'react-icons/fa';
-import { GoArrowUpRight } from 'react-icons/go';
 import Link from 'next/link';
 
 
