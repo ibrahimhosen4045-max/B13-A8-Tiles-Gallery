@@ -6,6 +6,7 @@ import Image from 'next/image'
 import { GoArrowUpRight } from 'react-icons/go'
 import Link from 'next/link'
 import { authClient } from '@/lib/auth-client'
+import AddCard from './AddCard'
 
 const Navber = () => {
   const { data: session, isPending } = authClient.useSession()
@@ -19,13 +20,9 @@ const Navber = () => {
   return (
     <div className=' absolute top-5 z-50 container w-11/12 left-[50%] translate-x-[-50%]'>
       <div className=" backdrop-blur-lg lg:mb-48 shadow-md w-full rounded-full bg-white border border-gray-100">
-        <input id="navbar-1-toggle" className="peer hidden" type="checkbox" />
-          <label htmlFor="navbar-1-toggle" className="fixed inset-0 hidden max-lg:peer-checked:block"></label>
           <div className="collapse-title navbar py-0 min-h-0">
             <div className="navbar-start">
-              <label htmlFor="navbar-1-toggle" className="btn btn-ghost lg:hidden">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
-              </label>
+              
               <Link href={'/'}>
               <button className="  flex items-center ">
                 <Image src={logo} alt='Logo' height={70}/>
@@ -40,7 +37,8 @@ const Navber = () => {
             </div>
             <div className="navbar-end">
             {isPending ? (<span className="loading loading-ring loading-md"></span>) : user ? (<div className='flex items-center gap-3'>
-          <h2 className='font-semibold text-[#5C1621]'>Hello, {user?.name}</h2>
+              <AddCard></AddCard>
+          <h2 className='font-semibold text-[#5C1621] hidden sm:flex'>Hello, {user?.name}</h2>
         <div className="dropdown dropdown-end">
       <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
         <div className='h-10.5 w-10.5 overflow-hidden rounded-full border-2 shadow-sm border-gray-300'>
@@ -81,13 +79,18 @@ const Navber = () => {
 
             </button>
             </Link> )}
+            
           </div>
-        </div>
-
-        <div className="collapse-content lg:hidden z-1">
-          <ul className="menu text-lg font-semibold">
-            {meno}
-          </ul>
+          <div className="dropdown">
+      <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden  transform rotate-180">
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
+      </div>
+      <ul
+        tabIndex="-1"
+        className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow right-0">
+        {meno}
+      </ul>
+    </div>
         </div>
       </div>
     </div>

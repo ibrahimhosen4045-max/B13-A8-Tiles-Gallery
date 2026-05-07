@@ -1,5 +1,7 @@
 import { Poppins } from "next/font/google";
 import "./globals.css";
+import { CartProvider } from "@/context/CartContext";
+import { ToastContainer } from "react-toastify";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -23,7 +25,11 @@ export default function RootLayout({ children }) {
       className={`${poppins.className} h-full antialiased`}
     >
       <body>
-        {children}
+        <CartProvider>
+          {children}
+          <ToastContainer position="top-center"/>
+        </CartProvider>
+        
       </body>
     </html>
   );

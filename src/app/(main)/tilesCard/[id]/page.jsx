@@ -3,8 +3,8 @@ import React, { use } from 'react'
 import bannerImage from '@/image/allbanner.jpg';
 import Image from 'next/image';
 import { FaFire } from 'react-icons/fa';
-import { RxDividerHorizontal } from 'react-icons/rx';
-import { IoMdAdd } from 'react-icons/io';
+import DetailsClint from '@/componet/detailComponent/DetailsClint';
+import Link from 'next/link';
 
 const Details = async ({params}) => {
     const {id} = await params
@@ -16,7 +16,7 @@ const Details = async ({params}) => {
     <div className='bg-gray-100'>
       {filterInfo.map(info => 
       <div key={info.id}>
-      <section  className="relative w-full h-[40vh] md:h-[45vh] lg:h-[35vh] overflow-hidden">
+      <section  className="relative w-full h-[40vh] md:h-80 lg:h-80 overflow-hidden">
             {/* Optimized Background Image */}
             <Image
               src={bannerImage}
@@ -25,7 +25,7 @@ const Details = async ({params}) => {
               priority
               placeholder="blur"
               sizes="100vw"
-              className="object-cover"
+              className="object-cover "
               quality={90}
             />
       
@@ -35,17 +35,17 @@ const Details = async ({params}) => {
                 
                 <div className='flex flex-col items-center gap-3  relative top-10'>
                   <h1 className='text-5xl font-semibold capitalize'>{info.roomType}</h1>
-                  <p className='text-lg capitalize cursor-pointer'>All / {info.roomType} Tiles</p>
+                  <p className='text-lg capitalize cursor-pointer'><Link href={'/allTiles'}><button className=' relative z-40 cursor-pointer hover:text-amber-400'>All</button></Link> / {info.roomType} Tiles</p>
                 </div>
               </div>
               
             </div>
         </section>
-        <div className='flex items-center gap-4 container w-11/12 mx-auto py-15'>
-            <div className='w-1/2 '>
+        <div className='flex flex-col lg:flex-row items-center gap-4 container w-11/12 mx-auto py-15'>
+            <div className='lg:w-1/2 '>
                 <Image src={info.image} alt='sourch' width={600} height={600}  className=' object-cover '/>
             </div>
-            <div className='w-1/2 space-y-13 '>
+            <div className='lg:w-1/2 space-y-13 '>
                 <div className=' space-y-3'>
                   <h1 className='text-3xl font-bold uppercase'>{info.title}</h1>
                   <h1 className='text-red-500 uppercase flex items-center gap-3'><FaFire /> Best Salling</h1>
@@ -59,15 +59,9 @@ const Details = async ({params}) => {
                 <h1 className='flex items-center'><span className='w-50 block uppercase'>Material :</span> <span>{info.material}</span></h1>
                 
                 <h1 className='flex items-center'><span className='w-50 block uppercase'>Availability :</span> <span className='text-green-500'>In Stock</span></h1>
-                <h1 className='flex items-center'><span className='w-50 block uppercase'>Quantity :</span> <div className='flex items-center border-2 border-[#5C1621] '>
-                  <span></span><RxDividerHorizontal className='m-1.5 '/> <span className='px-3 border-l-2 border-r-2'>1</span> <span><IoMdAdd className='m-1.5 '/></span>
-                </div></h1>
-                <h1 className='flex items-center'><span className='w-50 block uppercase'>Subtotal :</span> <span>100</span></h1>
+                <DetailsClint product = {info}></DetailsClint>
                 </div>
-                <div className='flex gap-3 w-full'>
-                  <button className='btn w-1/2'>ADD TO CART</button>
-                  <button className='btn w-1/2'>BUY IT NOW</button>
-                </div>
+                
             </div>
         </div>
         </div>

@@ -17,7 +17,7 @@ const Card = ({item}) => {
           {item.title}
         </h1>
         <p className='text-gray-500'>{item.currency}. {item.price}</p>
-        <Link href={`/tilesCard/${item.id}`}>
+        <Link href={`/tilesCard/${item.id}`} className='w-full'>
         <button className=' group btn  hover:text-[#5C1621] bg-white hover:border-[#5C1621]  w-full uppercase py-6'>View Details <HiArrowUpRight className='group-hover:rotate-45'/></button>
         </Link>
       </div>

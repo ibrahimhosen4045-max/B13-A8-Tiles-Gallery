@@ -21,5 +21,8 @@ export async function proxy(request) {
 // export default function proxy(request) { ... }
  
 export const config = {
-  matcher: '/myProfile',
+  matcher: [
+    '/myProfile/:path*',
+    '/tilesCard/:path*'
+  ],
 }
