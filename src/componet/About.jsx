@@ -11,11 +11,8 @@ const About = () => {
   
   return (
     <div className='flex flex-col lg:flex-row container w-11/12 mx-auto gap-10 items-center py-20'>
-
-      {/* LEFT IMAGE GRID */}
       <div className='w-full lg:flex-1 grid grid-cols-2 gap-4 '>
 
-        {/* Top Left */}
         <div className=' relative w-full h-[240] lg:h-85'>
           <Image 
             src={image2} 
@@ -24,8 +21,6 @@ const About = () => {
             className=' object-cover rounded-lg'
           />
         </div>
-
-        {/* Right Big Image */}
         <div className='relative row-span-2 w-full h-full'>
           <Image 
             src={image1}
@@ -35,7 +30,6 @@ const About = () => {
           />
         </div>
 
-        {/* Bottom Left */}
         <div className='relative w-full h-[240] lg:h-85'>
           <Image 
             src={image3} 
@@ -47,8 +41,8 @@ const About = () => {
 
       </div>
 
-      {/* RIGHT CONTENT */}
-      <div className='flex-1 space-y-10'>
+      
+      <div className='flex-1 space-y-10 '>
         <button className='flex   items-center gap-2 px-3 py-2 bg-amber-400/5 backdrop-blur-sm rounded-full'><div className=' size-2 bg-amber-400 rounded-full'></div> Built on Quality and Trust</button>
         <h1 className='text-5xl font-semibold'>
           Trusted quality driven tiles & marble manufacturers

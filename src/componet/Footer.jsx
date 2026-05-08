@@ -14,7 +14,7 @@ import { HiLocationMarker } from 'react-icons/hi'
 const Footer = () => {
 
   return (
-    <div className='w-full h-[85vh] md:h-[60vh] lg:h-[40vh] overflow-hidden relative text-white'>
+    <div className='w-full h-[85vh] md:h-[68vh] lg:h-[40vh] overflow-hidden relative text-white'>
 
       {/* Background Image */}
      <div className="absolute inset-0 -z-10">

@@ -8,9 +8,12 @@ import { FaEye, FaEyeSlash, FaFacebookF, FaGoogle, FaLinkedinIn, FaTwitter } fro
 import logo from '@/image/login.png'
 import Image from 'next/image'
 import { toast } from 'react-toastify'
+import { useRouter } from 'next/navigation'
+
 
 const RegisterPage = () => {
   const [showPass, setShowPass] = useState(false)
+  const router = useRouter()
 
   const { register, handleSubmit, formState: { errors } } = useForm()
 
@@ -30,6 +33,7 @@ const RegisterPage = () => {
     }
     if (res) {
       toast.success("Signup successful")
+      router.push('/login')
     }
   }
   const googleLogin = async () => {

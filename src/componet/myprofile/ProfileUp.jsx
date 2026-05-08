@@ -1,8 +1,9 @@
 "use client"
 import { authClient } from "@/lib/auth-client";
 import React, { useState } from "react"
-import { FaUser } from "react-icons/fa";
+
 import { FiUser } from "react-icons/fi";
+import { toast } from "react-toastify";
 
 const ProfileUp =  () => {
   const handleSubmit =async (e) => {
@@ -10,14 +11,21 @@ const ProfileUp =  () => {
     const name = e.target.name.value;
     const image = e.target.image.value;
 
-    await authClient.updateUser({
+    const {data, error} = await authClient.updateUser({
     name,
     image
 })
+  if(error){
+    toast.error(error.message)
+  }
+  if(data){
+    toast.success("Profile updated successfull")
+    document.getElementById("my_modal_1").close()
+  }
   }
   return (
     <>
-      {/* Open Button */}
+      
       <button
         className="btn mt-3 rounded-full text-white bg-blue-600"
         onClick={() =>
@@ -27,7 +35,7 @@ const ProfileUp =  () => {
         Update User
       </button>
 
-      {/* Modal */}
+
       <dialog id="my_modal_1" className="modal">
         <div className="modal-box rounded-3xl">
           <div className="bg-blue-100 inline-block p-2 rounded-full"><FiUser className="text-blue-600"/></div>

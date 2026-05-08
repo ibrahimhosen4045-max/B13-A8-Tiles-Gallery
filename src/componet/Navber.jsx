@@ -7,15 +7,16 @@ import { GoArrowUpRight } from 'react-icons/go'
 import Link from 'next/link'
 import { authClient } from '@/lib/auth-client'
 import AddCard from './AddCard'
+import NavLink from './NavLink'
 
 const Navber = () => {
   const { data: session, isPending } = authClient.useSession()
   const user = session?.user
   
   const meno = <>
-      <Link href={'/'}><li><button>Home</button></li></Link>
-      <Link href={'/allTiles'}><li><button>All Tiles</button></li></Link>
-      <Link href={'/myProfile'}><li><button>My Profile</button></li></Link>
+      <NavLink href={'/'}><li><button>Home</button></li></NavLink>
+      <NavLink href={'/allTiles'}><li><button>All Tiles</button></li></NavLink>
+      <NavLink href={'/myProfile'}><li><button>My Profile</button></li></NavLink>
   </>
   return (
     <div className=' absolute top-5 z-50 container w-11/12 left-[50%] translate-x-[-50%]'>
@@ -26,7 +27,7 @@ const Navber = () => {
               <Link href={'/'}>
               <button className="  flex items-center ">
                 <Image src={logo} alt='Logo' height={70}/>
-                  <h1 className='text-2xl font-bold leading-5 '>Tiles.</h1> 
+                  <h1 className='text-2xl font-bold leading-5 uppercase'>Tiles.</h1> 
               </button>
               </Link>
             </div>

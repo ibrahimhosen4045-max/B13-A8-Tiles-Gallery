@@ -18,7 +18,7 @@ const MyProfile = () => {
     <div className='mt-33 mb-33 flex flex-col w-11/12 lg:flex-row container mx-auto gap-10'>
       <div >
         <h1 className='text-xl font-bold pb-4 '>My Profile</h1>
-        <div className='flex flex-col items-center gap-2 border border-gray-200 shadow-md  py-8 px-28'>
+        <div className='flex flex-col items-center gap-2 border border-gray-200 shadow-md  py-8 w-95'>
         <div className='w-37.5 h-37.5 rounded-full overflow-hidden border-2 border-gray-300'>
         <Image src={users?.image || "https://img.magnific.com/free-vector/smiling-young-man-illustration_1308-174669.jpg"} alt='User' width={150} height={150} className=' object-cover w-full h-full'/>
       </div>

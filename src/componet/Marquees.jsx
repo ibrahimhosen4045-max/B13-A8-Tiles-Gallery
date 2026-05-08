@@ -1,28 +1,22 @@
 import { getFechData } from '@/lib/data'
-import Image from 'next/image'
-import Link from 'next/link'
 import React from 'react'
 import Marquee from 'react-fast-marquee'
-
-import { HiOutlineArrowRight } from 'react-icons/hi'
-import { HiArrowUpRight } from 'react-icons/hi2'
-
-
+import { FaFire } from 'react-icons/fa'
 
 const Marquees = async () => {
   const datas = await getFechData()
 
   return (
-    <div className='container mx-auto py-6'>
-      
+    <div className='container w-11/12 mx-auto py-3 flex h-full bg-gray-100'>
+      <button className='btn h-15 uppercase border-2 bg-[#5C1621] text-white  rounded-none ml-3'><FaFire className='text-amber-300'/> Hot Product</button>
       <Marquee 
         pauseOnHover={true} 
         speed={50}
         gradient={false}
         gradientWidth={20}
-        className=''
+        className=' font-medium'
       >
-        {datas.slice(0,6).map(info => (
+        {datas.map(info => (
           <div 
             key={info.id}
             className='mx-5'

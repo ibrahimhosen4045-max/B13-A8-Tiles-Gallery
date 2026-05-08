@@ -27,7 +27,7 @@ const Banner = () => {
       <div className="absolute inset-0 bg-linear-to-b from-black/80 via-black/50 to-black/80 ">
         <div className='w-11/12 mx-auto h-full flex flex-col items-center justify-center text-center gap-3 md:gap-5 text-white relative top-5  '>
           <button className='flex text-white  items-center gap-2 px-3 py-2 bg-amber-400/5 backdrop-blur-sm rounded-full'><div className=' size-2 bg-amber-400  rounded-full'></div> Built on Quality and Trust</button>
-          <h1 className='text-[30px] md:text-[35px] lg:text-[40px] xl:text-[52px] font-bold'>Discover Your Perfect  Aesthetic</h1>
+          <h1 className='text-[30px] md:text-[35px] lg:text-[40px] xl:text-[52px] font-semibold uppercase'>Discover Your Perfect  Aesthetic</h1>
           <p className='text-[14px] md:text-[16px] lg:text-lg xl:text-[22px]'>We manufacture high-quality natural marble using advanced  processing technology <br />  to deliver timeless beauty, strength, and precision for residential,</p>
           <div className='flex flex-col md:flex-row items-center gap-4'>
             <h1 className='flex items-center gap-1'><span className='bg-white rounded-full'><FaCheckCircle className='text-amber-400'/></span>Premium quality natural</h1>

@@ -1,4 +1,3 @@
-
 import { HashLoader } from "react-spinners"
 
 const loading = () => {
