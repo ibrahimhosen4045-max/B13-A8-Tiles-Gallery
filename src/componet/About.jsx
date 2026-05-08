@@ -13,7 +13,7 @@ const About = () => {
     <div className='flex flex-col lg:flex-row container w-11/12 mx-auto gap-10 items-center py-20'>
       <div className='w-full lg:flex-1 grid grid-cols-2 gap-4 '>
 
-        <div className=' relative w-full h-[240] lg:h-85'>
+        <div className=' relative w-full  lg:h-85'>
           <Image 
             src={image2} 
             alt='source'
